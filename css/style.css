@@ -1,27 +1,40 @@
-* {
-    box-sizing: border-box;
+#board {
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    margin-top: 100px;
 }
 
-h1 {
+#board h1 {
     text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
 }
 
-body {
-    display: flex;
-    justify-content: center;
+.grid {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 100px;
 }
 
-.board {
-    display: grid;
-    grid-template-rows: 200px 200px 200px;
-    grid-template-columns: 200px 200px 200px;
+.grid:hover {
+    background-color: azure;
 }
 
-.cell {
-    background: white;
-    border: 1px solid #555;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #AAA;
+#g0, #g1, #g2, #g3, #g4, #g5 {
+    border-bottom: 10px solid black;
+}
+
+#g2, #g5, #g8, #g1, #g4, #g7 {
+    border-left: 10px solid black;
+}
+
+.winner {
+    color: red;
 }
